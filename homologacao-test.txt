@@ -1,0 +1,1 @@
+criando ambiente e deploy de homologacao no repositorio remoto e na Vercel, respectivamente
