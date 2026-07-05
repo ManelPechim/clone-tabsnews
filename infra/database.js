@@ -1,4 +1,3 @@
-import { Client } from "pg";
 // client.connect((err) => {
 //   if (err) throw new Error('Algo deu errado: ', err);
 //   client.query(queryObject, () => {
@@ -6,6 +5,8 @@ import { Client } from "pg";
 //   })
 
 // });
+import { Client } from "pg";
+
 async function query(queryObject) {
   let client;
   try {
@@ -34,10 +35,12 @@ async function getNewClient() {
   return client;
 }
 
-export default {
+const database = {
   query,
   getNewClient,
 };
+
+export default database;
 
 function getSSLValues() {
   if (process.env.POSTGRES_CA) {
